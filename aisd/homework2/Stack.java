@@ -16,6 +16,9 @@ public class Stack {
     }
 
     public StackNode extract() {
+        if (this.topNode == null) {
+            return null;
+        }
         StackNode extractedNode = this.topNode;
         this.topNode = this.topNode.getPrevious();
         this.totalItems--;
@@ -26,3 +29,4 @@ public class Stack {
         return this.totalItems;
     }
 }
+
